@@ -10,11 +10,28 @@ export class FaceSnappedComponent implements OnInit {
   description!: string;
   createdDate!: Date;
   snaps!: number;
+  imageUrl!: string;
+  buttonMessage!: string;
 
-  ngOnInit () {
+  ngOnInit(): void {
     this.title = "Bib's";
     this.description = "Mon bébé d'amour";
     this.createdDate = new Date();
     this.snaps = 10;
+    this.imageUrl = "../../assets/images/20171212_112203.jpg";
+    this.buttonMessage = "Oh Snap!"; // Default value
   }
+
+  onSnapClick() {
+    if (this.buttonMessage === "Oh Snap!") {
+      this.snaps++;
+      this.buttonMessage = "Oops, un snap!";
+    } else {
+      this.snaps--;
+      this.buttonMessage = "Oh snap!";
+    }
+  }
+
+
+
 }

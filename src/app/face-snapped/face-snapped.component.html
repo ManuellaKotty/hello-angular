@@ -1,1 +1,10 @@
-<p>face-snapped works!</p>
+<div class="face-snap-card">
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+  <img [src]="imageUrl" [alt]="title" />
+  <p>Mis en ligne {{ createdDate }}</p>
+  <p>
+    <button (click)="onSnapClick()">{{ buttonMessage }}</button>
+    🤌 {{ snaps }}
+  </p>
+</div>
