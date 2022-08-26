@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
         title: "Bib's",
         description: "Mon bébé d'amour",
         createdDate: new Date(),
-        snaps: 10,
+        snaps: 18,
         imageUrl: "../../assets/images/20171212_112203.jpg",
         location: "Home"
       },
