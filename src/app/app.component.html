@@ -1,3 +1,4 @@
-<app-face-snapped [faceSnap]="mySnap"></app-face-snapped>
-<app-face-snapped [faceSnap]="myOtherSnap"></app-face-snapped>
-<app-face-snapped [faceSnap]="myLastSnap"></app-face-snapped>
+<app-face-snapped
+  *ngFor="let faceSnap of faceSnaps"
+  [faceSnap]="faceSnap"
+></app-face-snapped>

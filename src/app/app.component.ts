@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { FaceSnapped } from './models/face-snapped.model';
 
 @Component({
@@ -7,33 +8,34 @@ import { FaceSnapped } from './models/face-snapped.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  mySnap!: FaceSnapped;
-  myOtherSnap!: FaceSnapped;
-  myLastSnap!: FaceSnapped;
+  faceSnaps!: FaceSnapped[];
 
   ngOnInit() {
-    this.mySnap = new FaceSnapped(
-      "Bib's",
-      "Mon bébé d'amour",
-      new Date(),
-      10,
-      "../../assets/images/20171212_112203.jpg"
-    );
-
-    this.myOtherSnap = new FaceSnapped(
-      "Loca Manuella",
-      "Loooking good !",
-      new Date(),
-      6,
-      "../../assets/images/20171212_112203.jpg"
-    );
-    this.myLastSnap = new FaceSnapped(
-      "Babi",
-      "Ma ville natale. <3",
-      new Date(),
-      7,
-      "../../assets/images/20171212_112203.jpg"
-    );
+    this.faceSnaps = [
+      {
+        title: "Bib's",
+        description: "Mon bébé d'amour",
+        createdDate: new Date(),
+        snaps: 10,
+        imageUrl: "../../assets/images/20171212_112203.jpg",
+        location: "Home"
+      },
+      {
+        title: "Loca Manuella",
+        description: "Loooking good !",
+        createdDate: new Date(),
+        snaps: 6,
+        imageUrl: "../../assets/images/20171212_112203.jpg",
+        location: "Chez MamanManue"
+      },
+      {
+        title: "Babi",
+        description: "Ma ville natale. <3",
+        createdDate: new Date(),
+        snaps: 7,
+        imageUrl: "../../assets/images/20171212_112203.jpg"
+      }
+    ]
 
   }
 }
